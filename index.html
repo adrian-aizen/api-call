@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Anime Quotes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="relative font-mono flex justify-center align-center">
+    <div class="absolute inset-y-32 text-6xl">
+      <h1>Anime Quotes</h1>
+    </div>
+
+    <div class="flex absolute inset-y-56">
+      <div class=" text-xl ">
+        <input type="text" id="anime-name" placeholder="Enter anime name" />
+      </div>
+    </div>
+
+    <div class="flex absolute inset-y-72">
+      <div class=" text-xl">
+        <button id="fetch-quotes">Get Quotes</button>
+      </div>
+    </div>
+  </div>
+  
+
+  <div id="quotes-container"></div>
+  
+  <div id="pagination">
+    <button id="prev" disabled>Previous</button>
+    <button id="next" disabled>Next</button>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>

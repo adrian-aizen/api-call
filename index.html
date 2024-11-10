@@ -7,33 +7,34 @@
   <title>Anime Quotes</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div class="relative font-mono flex justify-center align-center">
-    <div class="absolute inset-y-32 text-6xl">
-      <h1>Anime Quotes</h1>
+<body class="bg-gray-100">
+
+  <div class="relative flex flex-col items-center justify-center min-h-screen bg-cover bg-center" style="background-image: url('webbg.jpg');">
+    <h1 class="text-6xl text-black mb-8">Anime Quotes</h1>
+
+    <div class="mb-4">
+      <input type="text" id="anime-name" placeholder="Enter anime name" class="p-2 text-xl border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-cyan-500" />
     </div>
 
-    <div class="flex absolute inset-y-56">
-      <div class=" text-xl ">
-        <input type="text" id="anime-name" placeholder="Enter anime name" />
-      </div>
+    <div class="quote-container">
+      <button id="quoteButton" class="bg-slate-500 text-white py-2 px-4 rounded hover:bg-cyan-600 transition duration-300">Get Quote</button>
     </div>
 
-    <div class="flex absolute inset-y-72">
-      <div class=" text-xl">
-        <button id="fetch-quotes">Get Quotes</button>
-      </div>
+    <div id="quotes-container" class="w-full max-w-2xl bg-white shadow-md rounded-lg p-4 mb-8 hidden">
+    </div>
+
+    <div class="flex space-x-4">
+      <button id="prev" class="bg-gray-300 text-gray-700 py-2 px-4 rounded disabled:opacity-50" disabled>Previous</button>
+      <button id="next" class="bg-gray-300 text-gray-700 py-2 px-4 rounded disabled:opacity-50" disabled>Next</button>
     </div>
   </div>
-  
 
-  <div id="quotes-container"></div>
-  
-  <div id="pagination">
-    <button id="prev" disabled>Previous</button>
-    <button id="next" disabled>Next</button>
+  <div id="quotes-container">
+    <p id="quote-text" class="text-xl text-gray-800"></p>
+    <p id="quote-character" class="text-lg text-gray-600"></p>
+    <p id="quote-anime" class="text-lg text-gray-600"></p>
   </div>
-  
+
   <script src="script.js"></script>
 </body>
 </html>
